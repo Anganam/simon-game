@@ -90,4 +90,10 @@ function playSound(name) {
 
 function animatePress(currentColour) {
     $("#"+ currentColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+
+    $("#" + currentColour).addClass("pressed");
+
+    setTimeout(function() {
+        $("#" + currentColour).removeClass("pressed");
+    },100);
 }
